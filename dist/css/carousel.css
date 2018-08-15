@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab|Robotto|Lato:300|Montserrat");
+.carousel{
+    position: relative;
+    width:100%;
+    height: calc(100vh - 72px);
+    overflow: hidden;
+}
+.carousel div{
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - 72px);
+    transition: .3s ease-in-out;
+    display: inline-block; 
+    background-size:cover;
+}
+.carousel .carousel-tour {
+    left: 100%;
+    background-image: url('../../assets/tour.jpg');
+}
+.carousel .carousel-menu {
+    background-image: url('../../assets/menu.jpg');
+
+}
+.carousel  .carousel-reservation {
+    background-image: url('../../assets/reservation.jpg');
+    right:100%;
+}
+.carousel button {
+    cursor: pointer;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255,255,255,.5);
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    box-shadow: 0px 0px 3px 1px rgba(0,0,0,.3);
+}
+.carousel button:hover{
+    background-color: rgba(255,255,255,1);
+}
+.carousel button:active{
+    box-shadow: none;;
+}
+.carousel button:disabled{
+    box-shadow: none;
+    opacity: .3;
+}
+.carousel button::before{
+    display: block;
+    content: '';
+    height: 20px;
+    width: 20px;
+    border: 3px rgba(255,255,255,1) solid;
+    border-left: none;
+    border-top: none;
+    border-radius:5px;
+}
+.carousel button:hover:before{
+    border:3px rgb(189, 166, 38) solid;
+    border-left: none;
+    border-top: none;
+}
+.carousel .btn-right{
+    right: 20px;
+    top: 50%;
+}
+.carousel button.btn-right::before{
+    margin-left: 3px;
+    transform: rotate(-45deg);
+
+}
+.carousel .btn-left{
+    left: 20px;
+    top: 50%;
+}
+.carousel button.btn-left::before{
+    margin-left: 10px;
+    transform: rotate(135deg);
+}
+.push-left{
+    transform: translateX(100%);
+}
+.push-right{
+    transform: translateX(-100%);
+}
+.carousel-call{
+ background: rgba(0,0,0,.5);
+ color: #fff;
+ display: flex;
+ position: absolute;
+ bottom: 0;
+ width: 100%;
+padding-top: 3vh;
+padding-bottom: 5vh;
+flex-direction: column;
+align-items: center;
+font-family: 'Montserrat', sans-serif;
+font-size: 1em;
+text-align: center;
+}
+.carousel-call a {
+    margin: 2vh;
+    font-size: 1.2em;
+    text-decoration: none;
+    background-color: #fff;
+    box-shadow: 0px 2px 1px rgba(0,0,0,.3);
+    padding: 7px 15px;
+    color: rgb(161, 131, 30);
+    border: 1px solid rgb(206, 170, 50);
+    transition: .3s ease-in-out;
+}
+.carousel-call a:hover {
+    background-color: rgb(197, 164, 56);;
+    color: #fff;
+
+}
+@media screen and (max-width: 870px){
+    .carousel div {
+        background-position: center;    
+    }
+}

@@ -2,6 +2,9 @@
 body {
   padding: 0;
   margin: 0;
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
 }
 body nav {
   position: absolute;
@@ -36,6 +39,7 @@ body nav ul {
   list-style: none;
   align-items: center;
   margin: 0;
+  padding: 0;
 }
 nav ul li {
   padding: 0;
@@ -63,7 +67,7 @@ nav .links a:active {
   background-color: rgb(196, 171, 33);
   font-weight: bold;
 }
-nav .links li:nth-child(1) a::after {
+nav .links li a.dropdown::after {
   content: "";
   display: inline-block;
   width: 10px;
@@ -76,8 +80,138 @@ nav .links li:nth-child(1) a::after {
   transform: rotate(-45deg);
 }
 .menu {
-  display: none;
+  position: absolute;
+  top: -150px;
+  z-index: -1;
+  display: block;
+  width: 200px;
+  height: auto;
+  overflow-y: hidden;
+  padding: 10px;
+  transform: translateX(-45px);
+  transition: top 0.5s ease-in-out;
+  border: 1px solid rgb(196, 171, 33);
+  background: #fff;
+  opacity: 0;
+}
+a.dropdown:hover ~ ul.menu,
+ul.menu:hover {
+  top: 70px;
+  opacity: 1;
+  z-index: 1;
+  transition: top 0.5s ease-in-out;
 }
 
+.menu li {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+.menu li a {
+  width: 100%;
+  color: #000;
+}
+input[type="checkbox"] {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  position: absolute;
+  left: -100000px;
+}
+.toggle {
+  display: none;
+}
 @media screen and (max-width: 870px) {
+  .toggle {
+    padding: 3px 6px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    border: 2px solid rgb(196, 171, 33);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    cursor: pointer;
+  }
+  .toggle:focus {
+    transform: translateY(50px);
+  }
+  .toggle span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    border: 2px solid rgb(196, 171, 33);
+    border-radius: 10px;
+  }
+  nav .links {
+    position: absolute;
+    top: 70px;
+    right: -250px;
+    transition: right 0.4s ease-in-out;
+  }
+  nav .links ul {
+    position: relative;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+    width: 250px;
+    align-items: start;
+    border: 2px solid rgb(196, 171, 33);
+    border-top: none;
+    padding: 0;
+    margin: 0;
+    background: #fff;
+  }
+  #menu {
+    border: 2px solid rgb(196, 171, 33);
+    border-top: none;
+    border-bottom: none;
+    position: static;
+    top: 0;
+    z-index: 1;
+    opacity: 1;
+    transform: unset;
+    background: rgba(224, 224, 224, 0.3);
+    border: 0px;
+  }
+  nav .links ul li {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  nav .links ul li a {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+  }
+
+  .menu li a {
+    color: black;
+    font-size: 0.9em;
+  }
+  nav .links.show {
+    right: 0px;
+  }
+  nav .links li a.dropdown::after {
+    display: none;
+  }
+}
+@media screen and (max-width: 320px) {
+  .logo img {
+    height: 7vw;
+  }
+  body nav .logo span {
+    font-size: 7vw;
+  }
+  .toggle {
+    transform: scale(0.8);
+  }
 }

@@ -7,22 +7,31 @@
     <title>Azlavillage</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="dist/css/main.css" />
-    <link rel="stylesheet" type="text/css" href="css/nav.css">
-    <script src="main.js"></script>
+    <link rel="stylesheet" type="text/css" href="dist/css/header.css">
+    <link rel="stylesheet" type="text/css" href="dist/css/carousel.css">
+    <script src="js/nav.js"></script>
+    <script src="js/carousel.js"></script>
 </head>
 
 <body>
+
     <nav>
         <a href="" class="logo">
-            <img src="/assets/logo.png" alt="">
-            <span>Azlavillage</span>
+            <img src="/assets/azla.png" alt="">
+            <span>AzlaVillage</span>
         </a>
-        <div class="toggle"></div>
+
+        <label for="toggle" class="toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <input onchange="menuToggle()" type="checkbox" id="toggle">
         <div class="links">
             <ul>
                 <li>
-                    <a href="">Menu</a>
-                    <!--<ul class="menu">
+                    <a class="dropdown" href="">Menu</a>
+                    <ul class="menu" id="menu">
                         <li>
                             <a href="">Cafe</a>
                         </li>
@@ -30,9 +39,9 @@
                             <a href="">Restaurant</a>
                         </li>
                         <li>
-                            <a href="">Patisserie</a>
+                            <a href="">pastry</a>
                         </li>
-                    </ul>-->
+                    </ul>
                 </li>
                 <li>
                     <a href="">Reservation</a>
@@ -46,6 +55,71 @@
             </ul>
         </div>
     </nav>
+    <header>
+        <div class="carousel">
+            <div class="carousel-tour">
+                <section class="carousel-call">
+                    <a href="">Take a tour</a>
+                    <span>Family Owned. Locally Made. Community Focused.</span>
+                </section>
+            </div>
+            <div class="carousel-menu">
+                <section class="carousel-call">
+                    <a href="">Check the menu</a>
+                    <span>Bringing people together over great food.</span>
+                </section>
+            </div>
+            <div class="carousel-reservation">
+                <section class="carousel-call">
+                    <a href="">Reserve a table</a>
+                    <span>Open all week, our services are always available</span>
+                </section>
+            </div>
+            <button onclick="carous('right')" class="btn-right "></button>
+            <button onclick="carous('left')" class="btn-left "></button>
+        </div>
+        <div class="brand ">
+            <div class="brand_logo ">
+                <img src="assets/azla.png " alt=" ">
+                <h1>AzlaVillage</h1>
+                <h2>Ressort</h2>
+                <ul class="brand_links ">
+                    <li>
+                        <a href=" ">Cafe</a>
+                    </li>
+                    <li>
+                        <a href=" ">Restaurant</a>
+                    </li>
+                    <li>
+                        <a href=" ">pastry</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="brand_info ">
+                <table>
+                    <tr>
+                        <td>
+                            <img src="assets/call-answer.png " alt=" ">
+                            <span>+212 (0) 669 106 043</span>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="assets/at.png " alt=" ">
+                            <span>contact@azlavillage.com</span>
+                        </td>
+                        <td></td>
+                    </tr>
+                </table>
+                <a href=" ">
+                    <img src="assets/maps.png " alt=" ">
+                    <span>go to the map</span>
+                </a>
+            </div>
+
+        </div>
+    </header>
 </body>
 
 </html>
