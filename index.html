@@ -9,6 +9,10 @@
     <link rel="stylesheet" type="text/css" media="screen" href="dist/css/main.css" />
     <link rel="stylesheet" type="text/css" href="dist/css/header.css">
     <link rel="stylesheet" type="text/css" href="dist/css/carousel.css">
+    <link rel="stylesheet" type="text/css" href="dist/css/reservation.css">
+    <link rel="stylesheet" type="text/css" href="node_modules/flatpickr/dist/flatpickr.min.css">
+    <script src="node_modules/flatpickr/dist/flatpickr.min.js"></script>
+    <script src="js/datepicker.js"></script>
     <script src="js/nav.js"></script>
     <script src="js/carousel.js"></script>
 </head>
@@ -16,7 +20,7 @@
 <body>
 
     <nav>
-        <a href="" class="logo">
+        <a href="#" class="logo">
             <img src="/assets/azla.png" alt="">
             <span>AzlaVillage</span>
         </a>
@@ -30,27 +34,27 @@
         <div class="links">
             <ul>
                 <li>
-                    <a class="dropdown" href="">Menu</a>
+                    <a class="dropdown" href="#">Menu</a>
                     <ul class="menu" id="menu">
                         <li>
-                            <a href="">Cafe</a>
+                            <a href="#">Cafe</a>
                         </li>
                         <li>
-                            <a href="">Restaurant</a>
+                            <a href="#">Restaurant</a>
                         </li>
                         <li>
-                            <a href="">pastry</a>
+                            <a href="#">pastry</a>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <a href="">Reservation</a>
+                    <a href="#">Reservation</a>
                 </li>
                 <li>
-                    <a href="">Tour</a>
+                    <a href="#">Tour</a>
                 </li>
                 <li>
-                    <a href="">Contact</a>
+                    <a href="#">Contact</a>
                 </li>
             </ul>
         </div>
@@ -59,19 +63,19 @@
         <div class="carousel">
             <div class="carousel-tour">
                 <section class="carousel-call">
-                    <a href="">Take a tour</a>
+                    <a href="#">Take a tour</a>
                     <span>Family Owned. Locally Made. Community Focused.</span>
                 </section>
             </div>
             <div class="carousel-menu">
                 <section class="carousel-call">
-                    <a href="">Check the menu</a>
+                    <a href="#">Check the menu</a>
                     <span>Bringing people together over great food.</span>
                 </section>
             </div>
             <div class="carousel-reservation">
                 <section class="carousel-call">
-                    <a href="">Reserve a table</a>
+                    <a href="#">Reserve a table</a>
                     <span>Open all week, our services are always available</span>
                 </section>
             </div>
@@ -85,13 +89,13 @@
                 <h2>Ressort</h2>
                 <ul class="brand_links ">
                     <li>
-                        <a href=" ">Cafe</a>
+                        <a href="#">Cafe</a>
                     </li>
                     <li>
-                        <a href=" ">Restaurant</a>
+                        <a href="#">Restaurant</a>
                     </li>
                     <li>
-                        <a href=" ">pastry</a>
+                        <a href="#">pastry</a>
                     </li>
                 </ul>
             </div>
@@ -112,7 +116,7 @@
                         <td></td>
                     </tr>
                 </table>
-                <a href=" ">
+                <a href="#">
                     <img src="assets/maps.png " alt=" ">
                     <span>go to the map</span>
                 </a>
@@ -120,6 +124,35 @@
 
         </div>
     </header>
+
+    <div class="reservations">
+        <div class="reservations-border">
+            <form>
+                <h2>Reservation</h2>
+                <label for="">Date</label>
+                <input class="reservations-calendar" type="text" name="" id="">
+                <label for="">Hour</label>
+                <input class="reservations-hour" type="text">
+                <label for="">Number of seats</label>
+                <select>
+                    <option value="1">1 person</option>
+                    <option value="2">2 people</option>
+                    <option value="3">3 people</option>
+                    <option value="4">4 people</option>
+                    <option value="5">5 people</option>
+                    <option value="6">6 people</option>
+                    <option value="7">7 people</option>
+                    <option value="8">8 people</option>
+                    <option value="9">9 people</option>
+                    <option value="10">10 people</option>
+                    <option value="11">11 people</option>
+                    <option value="12">12 people</option>
+                </select>
+                <input type="submit" value="Get a table">
+            </form>
+        </div>
+    </div>
+
 </body>
 
 </html>

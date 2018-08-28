@@ -21,7 +21,7 @@ function carous(option) {
     }
     activate(current_active, rightButton, leftButton);
     sessionStorage.setItem('current_active', current_active);
-    console.log(current_active);
+    //  console.log(current_active);
 }
 function activate(current_active, rightButton, leftButton) {
     if (current_active === 'left') {

@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css?family=Great+Vibes|Roboto+Slab');
+.reservations {
+    padding-top: 13vh;
+    padding-bottom: 12vh;
+    margin: auto;
+    margin-top: 72px;
+    border-top: 3px rgb(168, 150, 44) solid;
+    background: linear-gradient(rgba(51, 51, 50, .8), rgba(51, 51, 50, .8)), url('../../assets/reservation.jpg') no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.reservations form{
+    padding: 30px 40px 20px 40px;
+    width: 45vw;
+    min-width: 300px;
+    box-sizing: border-box;
+    border: 1.5px solid  rgb(226, 201, 60) ;
+    background: #fff ;
+    box-shadow: 0px 1px 5px 2px rgba(0,0,0,.1);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.reservations h2 {
+    font-family: 'Great Vibes', serif;
+    color: rgb(102, 101, 101);
+    font-size: 3.5em;
+    text-align: center;
+    font-weight: lighter;
+    text-shadow: 0px 0px 3px  rgba(0,0,0,.3);
+    margin: 0;
+    margin-bottom: 20px;
+    padding-bottom: 0px;
+    border-bottom: 1.5px rgb(101,101,101) solid;
+}
+
+.reservations label {
+    font-family: 'Roboto Slab', serif;
+    margin: 10px;
+    margin-top: 25px;
+    color: rgb(102, 101, 101);
+    text-shadow: 0px 0px 3px  rgba(0,0,0,.3);
+
+}
+
+.reservations input, .reservations select{
+    width: 20vw;
+    border: rgb(131, 119, 49) 1.2px solid;
+    height:24px;
+    min-width: 250px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    outline: none;
+}
+.reservations select{
+    height: 30px;
+    text-align-last: center;
+    cursor: pointer;
+}
+
+.reservations-border {
+    padding: 5px;
+    background:#fff ;
+    width: max-content;
+    margin:auto;
+    position: relative;
+    border: 2px solid rgb(226, 201, 60);
+}
+.reservations input[type='submit'] {
+    color: #fff;
+    cursor: pointer;
+    font-size: 1em;
+    border: 2px solid rgb(101,101,101);
+    padding: 10px;
+    background: rgb(101,101,101);
+    text-align: center;
+    height: max-content;
+    margin-top: 40px;
+    outline: none;
+    transition: .3s ease-in-out;
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,.2);
+}
+.reservations input[type='submit']:hover {
+    background:  rgb(143, 143, 143);
+    font-weight: bolder;
+}
+@media screen and (max-width: 500px){
+
+}
