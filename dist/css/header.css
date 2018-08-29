@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab|Robotto|Lato:300|Montserrat");
+
+header {
+  width: 100%;
+  display: grid;
+  position: relative;
+  grid-template-columns: 3fr 2fr;
+  top: 72px;
+  height: calc(100vh - 72px);
+  height: max-content;
+}
+header .brand {
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.95),
+      rgba(255, 255, 255, 0.95)
+    ),
+    url("../../assets/cafe.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: calc(100vh -72px);
+}
+header .brand_logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+header .brand_logo img {
+  width: 20vh;
+  height: auto;
+  margin: 5vh 0 2vh 40px;
+}
+header .brand_logo h1 {
+  margin: 0;
+  font-family: Lato, sans-serif;
+  font-size: 10vh;
+  font-weight: lighter;
+  transform: scaleY(0.9);
+}
+header .brand_logo h2 {
+  font-family: Montserrat, sans-serif;
+  font-weight: 200;
+  font-size: 5vh;
+  margin-top: -10px;
+}
+header .brand_logo ul {
+  list-style: none;
+  padding: 0;
+}
+header .brand_logo li {
+  display: inline-block;
+  margin: auto 10px;
+  margin-top: 1vh;
+  position: relative;
+}
+header .brand_logo a {
+  color: rgb(206, 170, 50);
+  text-decoration: none;
+  font-family: "Roboto Slab", serif;
+  font-size: 1.5em;
+  transition: 0.3s ease-in;
+}
+header .brand_logo li:nth-child(2)::before {
+  display: block;
+  position: absolute;
+  width: 2.5px;
+  height: 20px;
+  left: -15px;
+  top: 5px;
+  content: "";
+  background: rgb(206, 170, 50);
+}
+header .brand_logo li:nth-child(2)::after {
+  display: block;
+  position: absolute;
+  width: 2.5px;
+  height: 20px;
+  right: -15px;
+  top: 5px;
+  content: "";
+  background: rgb(206, 170, 50);
+}
+header .brand_logo a:hover {
+  color: #000;
+}
+header .brand_info {
+  font-family: Montserrat, sans-serif;
+  color: #555;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10vh;
+}
+header .brand_info img {
+  height: 16px;
+  width: 16px;
+  opacity: 0.8;
+  margin-right: 5px;
+}
+header .brand_info a {
+  text-decoration: none;
+  color: #fff;
+  background-color: rgb(206, 170, 50);
+  padding: 10px 20px;
+  text-align: center;
+  margin-top: 20px;
+  border: 1px solid rgb(161, 131, 30);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+}
+header .brand_info a:hover {
+  background-color: rgb(240, 202, 76);
+}
+@media screen and (max-width: 1000px) {
+  header {
+    grid-template-columns: unset;
+    grid-template-rows: auto;
+    height: max-content;
+  }
+  header .brand {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  header .brand_info a {
+    margin-top: 50px;
+  }
+
+}
+@media screen and (max-width: 650px) {
+
+  header .brand {
+    flex-direction: column;
+    height: calc(100vh - 70px);
+  }
+  header .brand_logo img {
+    width:25vh;
+    height: auto;
+    margin-top: 20px;
+    margin-left: 5vw;
+  }
+  header .brand_logo h1{
+    font-size: 10vw;
+    margin-bottom: 5px;
+  }
+  header .brand_logo h2{
+    font-size: 6vw;
+  }
+  
+  header .brand ul {
+    margin-top: 3px;
+  }
+  header .brand ul li a {
+    font-size: 5vw;
+  }
+  header .brand_logo li:nth-child(2)::before,
+  header .brand_logo li:nth-child(2)::after {
+    height: 5vw;
+  }
+  header .brand_info {
+    margin-top: 2vh;
+  }
+  header .brand_info a{
+    margin-top: 5vh;
+
+  }
+}
+
+@media screen and (max-height: 600px){
+  header .brand_info {
+    margin-top:4vh;
+  }
+}

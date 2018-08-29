@@ -1,0 +1,24 @@
+{
+  "name": "restaurant",
+  "version": "1.0.0",
+  "description": "rebuilding a restaurant website for experimentation",
+  "main": "index.js",
+  "dependencies": {
+    "flatpickr": "^4.5.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hamza-khabiri/restaurant-redo.git"
+  },
+  "keywords": [],
+  "author": "mohammed hamza khabiri",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hamza-khabiri/restaurant-redo/issues"
+  },
+  "homepage": "https://github.com/Hamza-khabiri/restaurant-redo#readme"
+}
