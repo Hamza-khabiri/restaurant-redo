@@ -27,10 +27,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-<<<<<<< HEAD
-=======
-
->>>>>>> 51b439e2ace45c9bb282ae5ab74eaabf1c10658f
 }
 .reservations h2 {
     font-family: 'Great Vibes', serif;
@@ -75,17 +71,12 @@
     width: max-content;
     margin:auto;
     position: relative;
-<<<<<<< HEAD
     opacity: 0;
     border: 2px solid rgb(226, 201, 60);
 }
 .reservations-border.fade-in {
     animation: fade-in .4s ease-out forwards; 
 }
-=======
-    border: 2px solid rgb(226, 201, 60);
-}
->>>>>>> 51b439e2ace45c9bb282ae5ab74eaabf1c10658f
 .reservations input[type='submit'] {
     color: #fff;
     cursor: pointer;
@@ -104,13 +95,10 @@
     background:  rgb(143, 143, 143);
     font-weight: bolder;
 }
-<<<<<<< HEAD
 .reservations input:disabled {
     opacity: .3;
 }
 
-=======
->>>>>>> 51b439e2ace45c9bb282ae5ab74eaabf1c10658f
 @media screen and (max-width: 500px){
 
 }
