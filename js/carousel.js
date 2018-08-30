@@ -1,6 +1,4 @@
-window.onload = () => {
-    var ech = sessionStorage.setItem('current_active', 'center');
-};
+
 function carous(option) {
     var current_active = sessionStorage.getItem('current_active');
     var carousel = document.querySelector('.carousel');

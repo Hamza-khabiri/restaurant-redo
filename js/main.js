@@ -23,3 +23,32 @@ $('a[href*= "#"]').not('[href="#"]').click(function (event) {
         }
     }
 });
+
+window.onload = () => {
+
+    //prevents carousel bug
+    var ech = sessionStorage.setItem('current_active', 'center');
+
+    //assigns datepicker to input fields
+    flatpickr('.reservations-calendar',
+        {
+            minDate: "today",
+            maxDate: new Date().addDays(30)
+        }
+    );
+    flatpickr('.reservations-hour',
+        {
+            enableTime: true,
+            noCalendar: true,
+            minDate: "09:00",
+            maxDate: "23:00"
+        }
+    )
+};
+
+//overrides date modification function
+Date.prototype.addDays = function (days) {
+    var date = new Date(this.valueOf());
+    date.setDate(date.getDate() + days);
+    return date;
+}
