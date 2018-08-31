@@ -124,13 +124,7 @@ input[type="checkbox"] {
   display: none;
 }
 @media screen and (max-width: 870px) {
-  body nav .logo img {
-    height: 12vw;
-    margin: 12px 0px;
-  }
-  body nav .logo span {
-    font-size: 7vw;
-  }
+
   .toggle {
     padding: 3px 6px;
     position: absolute;
@@ -210,6 +204,16 @@ input[type="checkbox"] {
   }
   nav .links li a.dropdown::after {
     display: none;
+  }
+
+}
+@media screen and (max-width: 400px) {
+  body nav .logo img {
+    height: 12vw;
+    margin: 12px 0px;
+  }
+  body nav .logo span {
+    font-size: 7vw;
   }
 }
 @media screen and (max-width: 320px) {
