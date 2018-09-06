@@ -58,7 +58,7 @@ Date.prototype.addDays = function (days) {
 //masonry style for menu elements
 //resizing grid-rows
 function getResizedItems(item) {
-    menuList = document.querySelector(".menu-list-container");
+    menuList = document.querySelector(".restaurant-list");
     gridGap = parseInt(window.getComputedStyle(menuList).getPropertyValue('grid-row-gap'));
     rowHeight = parseInt(window.getComputedStyle(menuList).getPropertyValue('grid-auto-rows'));
     rowSpan = Math.ceil((item.querySelector(".menu-list-content").getBoundingClientRect().height + gridGap) / (rowHeight + gridGap));

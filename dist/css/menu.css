@@ -109,10 +109,10 @@
 
 /* Individual menu parts*/
 
-.menu-list-container {
+.restaurant-list {
     width: 90%;
-    margin: auto;   
-    margin-bottom: 50px;
+    outline: none;
+    margin: 50px auto 50px auto; 
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 500px));
     grid-row-gap: 10px;
@@ -222,4 +222,57 @@
     .menu-item p.description{
         FONT-SIZE: 0.6em;
     }   
+}
+
+/* pastry */
+.pastry-list {
+width: 70%;
+min-width: 280px;
+margin-bottom: 50px;
+background: #2f2f2f;
+padding: 10px;
+border-radius: 5px;
+}
+.pastry-content{
+    padding: 10px;
+    box-shadow: 0px 0px 3px rgba(0,0,0,.5);
+    border: solid 2px rgb(65, 65, 65);
+    border-radius: 5px; 
+}
+.pastry-item-list{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 20px;  
+    grid-auto-rows: auto;
+    padding-bottom: 20px;
+}
+.pastry-item {
+    font-family: Montserrat, sans-serif;
+    font-weight: bolder;
+    color: rgb(223, 213, 169);
+    font-size: 1.2em;
+    display: flex;
+    width: 80%;    
+    justify-content: space-between;
+    padding: 10px 15px 0px 10px;
+    margin: auto;
+    align-items: center;
+    border-bottom: solid 2px #555;
+    height: 100%;
+
+}
+.pastry-item p:nth-child(1){
+    width: 80%;
+}
+.pastry-item p:nth-child(2) {
+    padding: 7px;
+    padding-right: 20px;
+    margin-bottom: 10px;
+    border: 1.5px rgb(235, 232, 220) solid;
+}
+.pastry-item p:nth-child(2)::after {
+    content: 'DH';
+    font-size: 0.5em;
+    position: absolute;
 }

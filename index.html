@@ -41,7 +41,7 @@
                             <a href="#">Cafe</a>
                         </li>
                         <li>
-                            <a href="#">Restaurant</a>
+                            <a href="#restaurant">Restaurant</a>
                         </li>
                         <li>
                             <a href="#">pastry</a>
@@ -93,7 +93,7 @@
                         <a href="#">Cafe</a>
                     </li>
                     <li>
-                        <a href="#">Restaurant</a>
+                        <a href="#restaurant">Restaurant</a>
                     </li>
                     <li>
                         <a href="#">pastry</a>
@@ -171,7 +171,8 @@
                 <li><button><img src="assets/cake-slice.png" alt=""></button></li>
             </ul>
         </div>
-        <div class="menu-list-container">
+        <div id="restaurant" style="margin-bottom: 30px"></div>
+        <div class="restaurant-list">
             <!--using nested divs is necessary to resize them with JS to create the masonry structure-->
             <div class="menu-list-item">
                 <div class="menu-list-content">
@@ -298,7 +299,37 @@
                 </div>
             </div>
         </div>
-
+        <div class="pastry-list">
+            <div class="menu-inner-content">
+                <h2>Pastry & Dessert</h2>
+                <div class="pastry-item-list">
+                    <div class="pastry-item">
+                        <p>Tarte Citron</p>
+                        <p>20</p>
+                    </div>
+                    <div class="pastry-item">
+                        <p>Flan maison à base d'oeuf</p>
+                        <p>20</p>
+                    </div>
+                    <div class="pastry-item">
+                        <p>Fondant au chocolat</p>
+                        <p>35</p>
+                    </div>
+                    <div class="pastry-item">
+                        <p>Crème Brulé</p>
+                        <p>35</p>
+                    </div>
+                    <div class="pastry-item">
+                        <p>Tiramisu</p>
+                        <p>35</p>
+                    </div>
+                    <div class="pastry-item">
+                        <p>Crème Brulé</p>
+                        <p>35</p>
+                    </div>
+                </div>
+            </div>
+        </div>
         <script src="js/menu-header.js"></script>
         <script src="js/reservations.js"></script>
         <script src="js/nav.js"></script>
