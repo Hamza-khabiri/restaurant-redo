@@ -26,7 +26,8 @@ $('a[href*= "#"]').not('[href="#"]').click(function (event) {
 
 window.onload = () => {
     //masonry in menu items
-    window.addEventListener("resize", resizeAllItems());
+    resizeAllItems();
+    window.onresize = resizeAllItems;
     //prevents carousel bug
     var ech = sessionStorage.setItem('current_active', 'center');
 
@@ -62,12 +63,10 @@ function getResizedItems(item) {
     rowHeight = parseInt(window.getComputedStyle(menuList).getPropertyValue('grid-auto-rows'));
     rowSpan = Math.ceil((item.querySelector(".menu-list-content").getBoundingClientRect().height + gridGap) / (rowHeight + gridGap));
     item.style.gridRowEnd = "span " + rowSpan;
-    console.log(item.style.gridRowEnd);
 }
 function resizeAllItems() {
     var items = document.querySelectorAll(".menu-list-item");
     for (let i = 0; i < items.length; i++) {
         getResizedItems(items[i]);
     }
-
 }

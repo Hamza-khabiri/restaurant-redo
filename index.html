@@ -161,8 +161,8 @@
     <div id="the-menu" class="the-menu">
         <h2>MENU</h2>
         <div class="menu-decoration"> <img src="assets/fork.png" alt=""></div>
-        <p>From baked goods made daily to sandwiches made by hand to thoughtfully prepared take away meals our goal is simple,
-            satisfying food.
+        <p class="menu-headline">From baked goods made daily to sandwiches made by hand to thoughtfully prepared take away
+            meals our goal is simple, satisfying food.
         </p>
         <div class="menu-icons">
             <ul>
@@ -172,25 +172,61 @@
             </ul>
         </div>
         <div class="menu-list-container">
+            <!--using nested divs is necessary to resize them with JS to create the masonry structure-->
             <div class="menu-list-item">
                 <div class="menu-list-content">
-                    <div class="rup"></div>
-                    <div class="lup"></div>
-                    <div class="rdown"></div>
-                    <div class="ldown"></div>
                     <div class="menu-inner-content">
                         <h2>Sandwich</h2>
+                        <div class="menu-item">
+                            <div class="text">
+                                <p>Jackson</p>
+                                <p>39</p>
+                            </div>
+                            <p class="description">Viande hachée, Aubergines, Poivrons grillées, Emmental, Tomates, Laitue
+                            </p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="text">
+                                <p>César</p>
+                                <p>38</p>
+                            </div>
+                            <p class="description">Poulet gruillée, Tomates, Laitue, Permasant et sauce césar</p>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="menu-list-item">
                 <div class="menu-list-content">
-                    <div class="rup"></div>
-                    <div class="lup"></div>
-                    <div class="rdown"></div>
-                    <div class="ldown"></div>
                     <div class="menu-inner-content">
                         <h2>Tacos</h2>
+                        <div class="menu-item">
+                            <div class="text">
+                                <p>Fameux</p>
+                                <p>36</p>
+                            </div>
+                            <p class="description">Poulet, Frites, Emmental, Sauce au choix</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="text">
+                                <p>Gourman</p>
+                                <p>36</p>
+                            </div>
+                            <p class="description">Viande hachée, Frites, Emmental, Sauce au choix</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="text">
+                                <p>Fruit de mer</p>
+                                <p>45</p>
+                            </div>
+                            <p class="description">Fruits de mer, Frites, Emmental, Sauce au choix</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-list-item">
+                <div class="menu-list-content">
+                    <div class="menu-inner-content">
+                        <h2>Salad</h2>
                     </div>
                 </div>
             </div>

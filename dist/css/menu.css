@@ -65,7 +65,7 @@
     animation: float .7s ease-in-out forwards;
 
 }
-.the-menu p {
+.the-menu .menu-headline {
     max-width: 600px;   
     text-align: center;
     font-family: Montserrat;
@@ -101,7 +101,7 @@
         width: 50px;
         padding: 10px;
     }
-    .the-menu p {
+    .the-menu .menu-headline {
         width: 80%;
     }
 
@@ -114,43 +114,27 @@
     margin: auto;   
     margin-bottom: 50px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 500px));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 500px));
     grid-row-gap: 10px;
     justify-content: center;
     grid-column-gap: 30px;
     grid-auto-flow: row dense;
-    grid-auto-rows: 160px;
+    grid-auto-rows: 25px;
 
 }
 .menu-list-content {
-    height: 300px;
     background-color: #2f2f2f;
     position: relative;
-    padding: 20px;
+    padding: 10px;
+    border-radius: 5px;
 }
-.rup, .lup, .rdown, .ldown{
-    position: absolute;
-    background:#fff;
-    height:50px;
-    width: 40px;
-    display: block;
-    border-radius: 50%;
-}
-.rup{
-    top: -15px;
-    right: -15px;
-}
-.rdown{
-    bottom: -15px;
-    right: -15px;
-}
-.lup{
-    left:-15px;
-    top: -15px;
-}
-.ldown{
-    left: -15px;
-    bottom: -15px;
+.menu-inner-content {
+    border: 2px solid rgb(65, 65, 65);
+    border-radius: 5px;
+    width: 100%;
+    padding: 10px;
+    height: 100%;
+    box-shadow: 0px 0px 3px rgba(0,0,0,.5);
 }
 
 .menu-inner-content h2{
@@ -158,16 +142,16 @@
     font-family: "Lobster", "sans-serif";
     font-weight: lighter;
     text-align: center;
-    margin: auto;
+    margin:  10px auto;
     border:2px solid rgb(65, 65, 65);
     background: rgba(78, 78, 78, .4);
     box-shadow: 0px 2px 1px rgba(0,0,0,.5);
     padding: 5px;
     width: 80%;
     font-size: 2.7em;
-    margin-top: 25px;
     position: relative;
     text-shadow: 0px 0px 2px #000;
+    min-width: 250px;
 }
 .menu-inner-content h2::before{
     content: '';
@@ -192,4 +176,50 @@
     border-top: none;
     border-bottom: 30px solid #2f2f2f;
     transform: rotate(-90deg);
+}
+.menu-item{
+    width: 90%;
+    padding: 15px;
+    padding-bottom: 5px;
+    margin: 20px auto;
+    border-bottom: dotted #555 3px;
+}
+.menu-item .text{
+    margin: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.menu-item .text p {
+    font-family: Montserrat, sans-serif;
+    font-weight: bolder;
+    color: rgb(233, 222, 163);
+    margin: 0 ;
+    font-size: 1.5em;
+}
+.menu-item .text p:nth-child(2){
+    justify-self: flex-end;
+}
+.menu-item .text p:nth-child(2)::after{
+    content: 'DH';
+    font-size: 0.5em;
+    position: absolute;
+}
+.menu-item p.description {
+    font-size: .8em;
+    color: rgb(236, 236, 236);
+    text-align: left;
+    font-family: Montserrat, 'sans serif';
+    font-weight: lighter;
+    line-height: 2em;
+    margin-right: 0;
+    text-transform: uppercase;
+}
+@media screen and (max-width: 700px){
+    .menu-item .text p{
+        font-size: 1.2em;
+    }
+    .menu-item p.description{
+        FONT-SIZE: 0.6em;
+    }   
 }
