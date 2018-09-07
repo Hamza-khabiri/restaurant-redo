@@ -1,5 +1,6 @@
 *{
     box-sizing: border-box;
+    outline: none;
 }
 
 .the-menu{
@@ -7,12 +8,14 @@
     padding-top: 60px;
     min-height: 400px;
     display: flex;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
     background: linear-gradient(rgba(255,255,255,.9), rgba(255,255,255,1)), url('../../assets//menu.jpg') no-repeat;
     background-position: center;
     background-size: cover;
+    outline: none;  
+    height: 100vh;
 }
 
 .the-menu h2 {
@@ -21,26 +24,74 @@
     font-size: 5em;
     margin: 20px;
 }
-
+.the-menu-lists{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
 .menu-icons ul {
     list-style: none;
     display: flex;
     justify-content: center;
     padding: 0;
 }
+/**************************************************/
+/* ICONS STUFF*/
 .menu-icons li {
     margin: 20px;
     border: rgb(196, 171, 33) solid 1px;
     border-radius: 50%;
     background: #fff;
     transition: .5s ease-in-out;
-
-
 }
 .menu-icons li:hover {
     background:rgb(65, 65, 65); 
-
 }
+.menu-icons li::after {
+    display: block;
+    content: 'restaurant';
+    font-family: Montserrat, sans-serif;
+    color: rgb(65, 65, 65);
+    font-size: 1.5em;
+    font-weight: bolder;
+    position: absolute;
+    text-align: center;
+    transform: translate(-10px, -10px);
+    opacity: 0;
+    transition: .3s ease-out;
+}
+.menu-icons li:nth-child(2)::after{
+    content: 'cafe';
+    transform: translate(30px, -10px);
+}
+.menu-icons li:nth-child(3)::after{
+    content: 'pastry';   
+    transform: translate(15px, -10px);
+}
+.menu-icons li:hover::after{
+    opacity: 1;
+    transform: translate(-10px, 10px);
+}
+.menu-icons li:nth-child(2):hover::after{
+    transform: translate(30px, 10px);
+}
+.menu-icons li:nth-child(3):hover::after{
+    transform: translate(15px, 10px);
+}
+
+@media screen and (max-width: 700px){
+    .menu-icons li::after{
+        font-size: 1em;
+    }
+    .menu-icons li:nth-child(2)::after{
+        transform: translate(18px, -10px);
+    }
+    .menu-icons li:nth-child(2):hover::after{
+        transform: translate(18px, 10px);
+    }
+}
+
+/*******************************************/
 .menu-icons img {
     width: 100px;
     padding: 20px;
@@ -95,8 +146,11 @@
         font-size: 3em;
         margin: 20px 5px;
     }
+    .menu-icons li {
+        margin: 10px;
+    }
     .menu-icons img{
-        width: 50px;
+        width: 60px;
         padding: 10px;
     }
     .the-menu .menu-headline {
@@ -107,7 +161,7 @@
 
 /* Individual menu parts*/
 
-.restaurant-list {
+.restaurant-list, .cafe-list {
     width: 90%;
     outline: none;
     margin: 50px auto 50px auto; 
@@ -118,8 +172,8 @@
     grid-column-gap: 30px;
     grid-auto-flow: row dense;
     grid-auto-rows: 25px;
-
 }
+
 .menu-list-content {
     background-color: #2f2f2f;
     position: relative;
@@ -214,6 +268,7 @@
     margin-right: 0;
     text-transform: uppercase;
 }
+
 @media screen and (max-width: 700px){
     .menu-item .text p{
         font-size: 1.2em;
@@ -227,6 +282,7 @@
 .pastry-list {
 width: 70%;
 min-width: 280px;
+margin:auto;
 margin-bottom: 50px;
 background: #2f2f2f;
 padding: 10px;
@@ -318,5 +374,26 @@ border-radius: 5px;
 @media screen and (max-width: 410px){
     .pastry-item {
         width: 65%;
+    }
+}
+.list-wrapper-header{
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 6vw;
+}
+.list-wrapper-header h3{
+    font-family: Lato, sans-serif;
+    font-size: 3em;
+    font-weight: bolder;
+    border: 2px solid rgb(196, 171, 33);
+    border-radius: 5px;
+    padding: 5px 20px;
+    width: max-content;
+    margin: auto;
+}
+@media screen and (max-width: 500px){
+    .list-wrapper-header h3{
+        font-size: 2em;
     }
 }

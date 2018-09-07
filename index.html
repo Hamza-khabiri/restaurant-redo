@@ -44,7 +44,7 @@
                             <a href="#restaurant">Restaurant</a>
                         </li>
                         <li>
-                            <a href="#">pastry</a>
+                            <a href="#pastry">pastry</a>
                         </li>
                     </ul>
                 </li>
@@ -96,7 +96,7 @@
                         <a href="#restaurant">Restaurant</a>
                     </li>
                     <li>
-                        <a href="#">pastry</a>
+                        <a href="#pastry">pastry</a>
                     </li>
                 </ul>
             </div>
@@ -157,7 +157,6 @@
             </form>
         </div>
     </div>
-
     <div id="the-menu" class="the-menu">
         <h2>MENU</h2>
         <div class="menu-decoration"> <img src="assets/fork.png" alt=""></div>
@@ -166,176 +165,309 @@
         </p>
         <div class="menu-icons">
             <ul>
-                <li><button><img src="assets/burger.png" alt=""></button></li>
-                <li><button><img src="assets/coffee-cup.png" alt=""></button></li>
-                <li><button><img src="assets/cake-slice.png" alt=""></button></li>
+                <li><button id="restaurantButton"><img src="assets/burger.png" alt=""></button></li>
+                <li><button id="cafeButton"><img src="assets/coffee-cup.png" alt=""></button></li>
+                <li><button id="pastryButton"><img src="assets/cake-slice.png" alt=""></button></li>
             </ul>
         </div>
-        <div id="restaurant" style="margin-bottom: 30px"></div>
-        <div class="restaurant-list">
-            <!--using nested divs is necessary to resize them with JS to create the masonry structure-->
-            <div class="menu-list-item">
-                <div class="menu-list-content">
-                    <div class="menu-inner-content">
-                        <h2>Sandwich</h2>
-                        <div class="menu-item">
-                            <div class="text">
-                                <p>Jackson</p>
-                                <p>39</p>
-                            </div>
-                            <p class="description">Viande hachée, Aubergines, Poivrons grillées, Emmental, Tomates, Laitue
-                            </p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="text">
-                                <p>César</p>
-                                <p>38</p>
-                            </div>
-                            <p class="description">Poulet gruillée, Tomates, Laitue, Permasant et sauce césar</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="menu-list-item">
-                <div class="menu-list-content">
-                    <div class="menu-inner-content">
-                        <h2>Tacos</h2>
-                        <div class="menu-item">
-                            <div class="text">
-                                <p>Fameux</p>
-                                <p>36</p>
-                            </div>
-                            <p class="description">Poulet, Frites, Emmental, Sauce au choix</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="text">
-                                <p>Gourman</p>
-                                <p>36</p>
-                            </div>
-                            <p class="description">Viande hachée, Frites, Emmental, Sauce au choix</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="text">
-                                <p>Fruit de mer</p>
-                                <p>45</p>
-                            </div>
-                            <p class="description">Fruits de mer, Frites, Emmental, Sauce au choix</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="menu-list-item">
-                <div class="menu-list-content">
-                    <div class="menu-inner-content">
-                        <h2>Salad</h2>
-                        <div class="menu-item">
-                            <div class="text">
-                                <p>Tropicale</p>
-                                <p>45</p>
-                            </div>
-                            <p class="description">Laitue, Tomates, Kiwi, Ananas , Pomme verte, Formage, Jambon de dinde
-                                et vinegraite de miel</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="text">
-                                <p>Jardin</p>
-                                <p>43</p>
-                            </div>
-                            <p class="description">Laitue, Pomme de terre, Tomates, Hricot vertes carottes, Mais, Vinegrette
-                                de miel, thon, oeuf dur</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="text">
-                                <p>Harlem</p>
-                                <p>55</p>
-                            </div>
-                            <p class="description">Laitue, Tomates, Fruit de mer, Mais, Carottes, grains de sésammes et Vinegrette
-                                de soja</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="text">
-                                <p>César</p>
-                                <p>45</p>
-                            </div>
-                            <p class="description">Laitue, Tomates cerises, Poulet grillée, Permasant, Crouton, Sauce césar</p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <div class="menu-list-item">
-                <div class="menu-list-content">
-                    <div class="menu-inner-content">
-                        <h2>Pasta</h2>
-                        <div class="menu-item">
-                            <div class="text">
-                                <p>Pesto</p>
-                                <p>45</p>
-                            </div>
-                            <p class="description">Pesto de basilic à l'huile d'olive et parmesan</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="text">
-                                <p>Bolognaise</p>
-                                <p>55</p>
-                            </div>
-                            <p class="description">Sauce tomate, Viande hachée, fines herbes</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="text">
-                                <p>Lasagne au four</p>
-                                <p>45</p>
-                            </div>
-                            <p class="description">Sauce tomates, Sauce bechamel, Viande hachée, Permasant</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="text">
-                                <p>chicken</p>
-                                <p>50</p>
-                            </div>
-                            <p class="description">Sauce tomates, Sauce bechamel, Viande hachée, Permasant</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="pastry-list">
-            <div class="menu-inner-content">
-                <h2>Pastry & Dessert</h2>
-                <div class="pastry-item-list">
-                    <div class="pastry-item">
-                        <p>Tarte Citron</p>
-                        <p>20</p>
-                    </div>
-                    <div class="pastry-item">
-                        <p>Flan maison à base d'oeuf</p>
-                        <p>20</p>
-                    </div>
-                    <div class="pastry-item">
-                        <p>Fondant au chocolat</p>
-                        <p>35</p>
-                    </div>
-                    <div class="pastry-item">
-                        <p>Crème Brulé</p>
-                        <p>35</p>
-                    </div>
-                    <div class="pastry-item">
-                        <p>Tiramisu</p>
-                        <p>35</p>
-                    </div>
-                    <div class="pastry-item">
-                        <p>Crème Brulé</p>
-                        <p>35</p>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
-    <script src="js/menu-header.js"></script>
-    <script src="js/reservations.js"></script>
-    <script src="js/nav.js"></script>
-    <script src="js/carousel.js"></script>
-    <script src="js/main.js"></script>
+    <div class="the-menu-lists">
+        <div class="list-wrapper">
+            <div class="list-wrapper-header">
+                <h3>Restaurant</h3>
+            </div>
+            <div class="restaurant-list">
+                <!--using nested divs is necessary to resize them with JS to create the masonry structure-->
+                <div class="menu-list-item">
+                    <div class="menu-list-content">
+                        <div class="menu-inner-content">
+                            <h2>Sandwich</h2>
+                            <div class="menu-item">
+                                <div class="text">
+                                    <p>Jackson</p>
+                                    <p>39</p>
+                                </div>
+                                <p class="description">Viande hachée, Aubergines, Poivrons grillées, Emmental, Tomates, Laitue
+                                </p>
+                            </div>
+                            <div class="menu-item">
+                                <div class="text">
+                                    <p>César</p>
+                                    <p>38</p>
+                                </div>
+                                <p class="description">Poulet gruillée, Tomates, Laitue, Permasant et sauce césar</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-list-item">
+                    <div class="menu-list-content">
+                        <div class="menu-inner-content">
+                            <h2>Tacos</h2>
+                            <div class="menu-item">
+                                <div class="text">
+                                    <p>Fameux</p>
+                                    <p>36</p>
+                                </div>
+                                <p class="description">Poulet, Frites, Emmental, Sauce au choix</p>
+                            </div>
+                            <div class="menu-item">
+                                <div class="text">
+                                    <p>Gourman</p>
+                                    <p>36</p>
+                                </div>
+                                <p class="description">Viande hachée, Frites, Emmental, Sauce au choix</p>
+                            </div>
+                            <div class="menu-item">
+                                <div class="text">
+                                    <p>Fruit de mer</p>
+                                    <p>45</p>
+                                </div>
+                                <p class="description">Fruits de mer, Frites, Emmental, Sauce au choix</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-list-item">
+                    <div class="menu-list-content">
+                        <div class="menu-inner-content">
+                            <h2>Salad</h2>
+                            <div class="menu-item">
+                                <div class="text">
+                                    <p>Tropicale</p>
+                                    <p>45</p>
+                                </div>
+                                <p class="description">Laitue, Tomates, Kiwi, Ananas , Pomme verte, Formage, Jambon de dinde
+                                    et vinegraite de miel</p>
+                            </div>
+                            <div class="menu-item">
+                                <div class="text">
+                                    <p>Jardin</p>
+                                    <p>43</p>
+                                </div>
+                                <p class="description">Laitue, Pomme de terre, Tomates, Hricot vertes carottes, Mais, Vinegrette
+                                    de miel, thon, oeuf dur</p>
+                            </div>
+                            <div class="menu-item">
+                                <div class="text">
+                                    <p>Harlem</p>
+                                    <p>55</p>
+                                </div>
+                                <p class="description">Laitue, Tomates, Fruit de mer, Mais, Carottes, grains de sésammes
+                                    et Vinegrette de soja</p>
+                            </div>
+                            <div class="menu-item">
+                                <div class="text">
+                                    <p>César</p>
+                                    <p>45</p>
+                                </div>
+                                <p class="description">Laitue, Tomates cerises, Poulet grillée, Permasant, Crouton, Sauce
+                                    césar
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="menu-list-item">
+                    <div class="menu-list-content">
+                        <div class="menu-inner-content">
+                            <h2>Pasta</h2>
+                            <div class="menu-item">
+                                <div class="text">
+                                    <p>Pesto</p>
+                                    <p>45</p>
+                                </div>
+                                <p class="description">Pesto de basilic à l'huile d'olive et parmesan</p>
+                            </div>
+                            <div class="menu-item">
+                                <div class="text">
+                                    <p>Bolognaise</p>
+                                    <p>55</p>
+                                </div>
+                                <p class="description">Sauce tomate, Viande hachée, fines herbes</p>
+                            </div>
+                            <div class="menu-item">
+                                <div class="text">
+                                    <p>Lasagne au four</p>
+                                    <p>45</p>
+                                </div>
+                                <p class="description">Sauce tomates, Sauce bechamel, Viande hachée, Permasant</p>
+                            </div>
+                            <div class="menu-item">
+                                <div class="text">
+                                    <p>chicken</p>
+                                    <p>50</p>
+                                </div>
+                                <p class="description">Sauce tomates, Sauce bechamel, Viande hachée, Permasant</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="list-wrapper">
+            <div class="list-wrapper-header">
+                <h3>Pastry</h3>
+            </div>
+            <div class="pastry-list">
+                <div class=" menu-inner-content ">
+                    <h2>Tarts & Dessert</h2>
+                    <div class="pastry-item-list ">
+                        <div class="pastry-item ">
+                            <p>Tarte Citron</p>
+                            <p>20</p>
+                        </div>
+                        <div class="pastry-item ">
+                            <p>Flan maison à base d'oeuf</p>
+                            <p>20</p>
+                        </div>
+                        <div class="pastry-item ">
+                            <p>Fondant au chocolat</p>
+                            <p>35</p>
+                        </div>
+                        <div class="pastry-item ">
+                            <p>Crème Brulé</p>
+                            <p>35</p>
+                        </div>
+                        <div class="pastry-item ">
+                            <p>Tiramisu</p>
+                            <p>35</p>
+                        </div>
+                        <div class="pastry-item ">
+                            <p>Crème Brulé</p>
+                            <p>35</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="list-wrapper">
+            <div class="list-wrapper-header">
+                <h3>Cafe</h3>
+            </div>
+            <div class="cafe-list">
+                <div class="menu-list-item">
+                    <div class="menu-list-content">
+                        <div class="menu-inner-content">
+                            <h2>Coffee</h2>
+                            <div class="menu-item">
+                                <div class="text">
+                                    <p>Fresh Brew
+                                    </p>
+                                    <p>21</p>
+                                </div>
+                                <p class="description">Hot cup o' Joe, poured fresh. *Larges get free refills while in-house!
+                                </p>
+                            </div>
+                            <div class="menu-item">
+                                <div class="text">
+                                    <p>Americano</p>
+                                    <p>18</p>
+                                </div>
+                                <p class="description">Espresso and hot water.</p>
+                            </div>
+                            <div class="menu-item">
+                                <div class="text">
+                                    <p>Cafe con Leche</p>
+                                    <p>16</p>
+                                </div>
+                                <p class="description">The classic espresso with steamed milk</p>
+                            </div>
+                            <div class="menu-item">
+                                <div class="text">
+                                    <p>Latte</p>
+                                    <p>25</p>
+                                </div>
+                                <p class="description">Espresso and steamed milk with light foam.</p>
+                            </div>
+                            <div class="menu-item">
+                                <div class="text">
+                                    <p>*Cafe Ybor</p>
+                                    <p>26</p>
+                                </div>
+                                <p class="description">Our house favorite! Espresso, steamed milk, and sweetened condensed
+                                    milk. "If coffee were to give out hugs."</p>
+                            </div>
+                            <div class="menu-item">
+                                <div class="text">
+                                    <p>Cappuccino</p>
+                                    <p>18</p>
+                                </div>
+                                <p class="description">Espresso with very frothed, steamed milk.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-list-item">
+                    <div class="menu-list-content">
+                        <div class="menu-inner-content">
+                            <h2>Tea</h2>
+                            <div class="menu-item">
+                                <div class="text">
+                                    <p>Matcha Latte</p>
+                                    <p>20</p>
+                                </div>
+                                <p class="description">Concentrated, powdered green tea with steamed milk.
+                                </p>
+                            </div>
+                            <div class="menu-item">
+                                <div class="text">
+                                    <p>Chai Latte</p>
+                                    <p>20</p>
+                                </div>
+                                <p class="description">Cold brewed chai tea with steamed milk.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-list-item">
+                    <div class="menu-list-content">
+                        <div class="menu-inner-content">
+                            <h2>Juice</h2>
+                            <div class="menu-item">
+                                <div class="text">
+                                    <p>GREEN SMOOTHIE</p>
+                                    <p>25</p>
+                                </div>
+                                <p class="description">kale • spinach • pineapple • banana • lemon • coconut milk • apple
+                                    juice
+                                </p>
+                            </div>
+                            <div class="menu-item">
+                                <div class="text">
+                                    <p>MATCHA GREEN</p>
+                                    <p>30</p>
+                                </div>
+                                <p class="description">matcha green tea • maca powder • cashews • spinach • mango • banana
+                                    • lemon • himalayan pink salt • almond milk</p>
+                            </div>
+                            <div class="menu-item">
+                                <div class="text">
+                                    <p>COCO PRO</p>
+                                    <p>20</p>
+                                </div>
+                                <p class="description">fresh young coconut • coconut water • hemp seeds • probiotics</p>
+                            </div>
+                            <div class="menu-item">
+                                <div class="text">
+                                    <p>VERY STRAWBERRY</p>
+                                    <p>35</p>
+                                </div>
+                                <p class="description">strawberries • banana • apple juice</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="js/menu-header.js "></script>
+    <script src="js/reservations.js "></script>
+    <script src="js/nav.js "></script>
+    <script src="js/carousel.js "></script>
+    <script src="js/main.js "></script>
 </body>
 
 </html>
