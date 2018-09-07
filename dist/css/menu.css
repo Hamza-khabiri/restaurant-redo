@@ -21,9 +21,7 @@
     font-size: 5em;
     margin: 20px;
 }
-.menu-icons{
-    margin-bottom: 50px;
-}
+
 .menu-icons ul {
     list-style: none;
     display: flex;
@@ -307,7 +305,7 @@ border-radius: 5px;
 }
 @media screen and (max-width: 510px){
     .pastry-list{
-        width: 98%;
+        width: 95%;
     }
     .pastry-list .menu-inner-content h2{
         box-sizing: border-box;
@@ -316,7 +314,9 @@ border-radius: 5px;
         height: 70px;
         width: 280px;
     }
+}
+@media screen and (max-width: 410px){
     .pastry-item {
-        width: 60%;
+        width: 65%;
     }
 }
