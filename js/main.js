@@ -72,15 +72,20 @@ function resizeAllItems() {
 }
 
 //menu switch buttons
-var resBtn = document.querySelector('#restaurantButton img');
-var cafBtn = document.querySelector('#cafeButton img');
-var pasBtn = document.querySelector('#pastryButton img');
+var resBtn = document.querySelector('#restaurantButton');
+var cafBtn = document.querySelector('#cafeButton');
+var pasBtn = document.querySelector('#pastryButton');
+var resLink = document.querySelector('#menu li:nth-child(2) a');
+var cafLink = document.querySelector('#menu li:nth-child(1) a');
+var pasLink = document.querySelector('#menu li:nth-child(3) a');
 resBtn.type = 'restaurant';
 cafBtn.type = 'cafe';
 pasBtn.type = 'pastry';
-resBtn.addEventListener('click', openMenu, true);
-cafBtn.addEventListener('click', openMenu, true);
-pasBtn.addEventListener('click', openMenu, true);
+resLink.type = 'restaurant';
+cafLink.type = 'cafe';
+pasLink.type = 'pastry';
+var arr = [resBtn, cafBtn, pasBtn, resLink, pasLink, cafLink];
+arr.forEach((item) => { item.addEventListener('click', openMenu, true); console.log(item) });
 function openMenu(evt) {
     var pastry = document.querySelector('.list-wrapper:nth-child(2)');
     var cafe = document.querySelector('.list-wrapper:nth-child(3)');;
@@ -97,7 +102,6 @@ function openMenu(evt) {
             restaurant.setAttribute('style', 'order: 3');
             cafe.setAttribute('style', 'order: 1');
             pastry.setAttribute('style', 'order: 2');
-
             break;
 
         case 'pastry':
@@ -107,4 +111,8 @@ function openMenu(evt) {
             break;
     }
     resizeAllItems();
+    var scrollPos = ($('.the-menu-lists').offset().top - 100);
+    $('html, body').animate({
+        scrollTop: scrollPos
+    }, 500);
 }
