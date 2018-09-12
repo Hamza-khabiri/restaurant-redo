@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Great+Vibes|Roboto+Slab');
 @keyframes fade-in{
     0%      { transform: translateY(150px); opacity: 0; }
     65%     { opacity: .5;}

@@ -26,11 +26,15 @@ $('a[href*= "#"]').not('[href="#"]').click(function (event) {
 });
 
 window.onload = () => {
-    //masonry in menu items
+    //start at the top of the page
+    $(document).ready(function(){
+        $(window).scrollTop(0);
+    })
+    //masonry in menu items 
     resizeAllItems();
     window.onresize = resizeAllItems;
     //prevents carousel bug
-    var ech = sessionStorage.setItem('current_active', 'center');
+    sessionStorage.setItem('current_active', 'center');
 
     //assigns datepicker to input fields
     flatpickr('.reservations-calendar',
@@ -85,7 +89,7 @@ resLink.type = 'restaurant';
 cafLink.type = 'cafe';
 pasLink.type = 'pastry';
 var arr = [resBtn, cafBtn, pasBtn, resLink, pasLink, cafLink];
-arr.forEach((item) => { item.addEventListener('click', openMenu, true); console.log(item) });
+arr.forEach((item) => { item.addEventListener('click', openMenu, true)});
 function openMenu(evt) {
     var pastry = document.querySelector('.list-wrapper:nth-child(2)');
     var cafe = document.querySelector('.list-wrapper:nth-child(3)');;
