@@ -26,6 +26,36 @@ $('a[href*= "#"]').not('[href="#"]').click(function (event) {
 });
 
 window.onload = () => {
+    function arrayMin(arr){
+        var index = arr.findIndex(item =>
+        { 
+            var max = true;
+            for(let i =0; i< 5; i++){
+            if(item < arr[i]){
+                max = false
+            }
+            }
+            return max ;
+        });
+        arr.splice(index, 1);
+        return arr;
+    }
+    function arrayMax(arr){
+        var index = arr.findIndex(item =>
+        { 
+            var max = true;
+            for(let i =0; i< 5; i++){
+            if(item > arr[i]){
+                max = false
+            }
+            }
+            return max ;
+        });
+        arr.splice(index, 1);
+        return arr;
+    }
+    console.log(arrayMax([1,2,3,4,5]),arrayMin([1,2,3,4,5]));
+
     //start at the top of the page
     $(document).ready(function(){
         $(window).scrollTop(0);
@@ -120,3 +150,4 @@ function openMenu(evt) {
         scrollTop: scrollPos
     }, 500);
 }
+
